@@ -5,9 +5,9 @@
     id          = "com.Fahadin.quransorif"
     versionCode = "1" 
     version     = "1.0.0" >
-   <name>Fahadin Calculator</name>
+   <name>5 Kalima</name>
     <description>
-            A mobile quransorif application. 
+            A mobile simple application. 
     </description>
     <author href="https://www.facebook.com/fahadkamal05/" email="kawsarkamal71@gmail.com">
             Fahad Kamal
