@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>San Angelico Museum of Contemporary Art</title>
+		<link rel="stylesheet" href="css/jquery.mobile.min.css">
+		<style>
+			#homeBanner {
+				width: 100%;
+			}
+
+			.banner {
+				display: block;
+				width: 100%;
+			}
+			#homeScreen {
+				background: #aecaf7;
+			}
+			#suraitems {
+				background: #aecaf7;
+			}
+			#Surah-1{
+				background: #aecaf7;
+			}
+			#Surah-2{
+				background: #aecaf7;
+			}
+			#Surah-3{
+				background: #aecaf7;
+			}
+			#Surah-4{
+				background: #aecaf7;
+			}
+			#Surah-5{
+				background: #aecaf7;
+			}
+			#aboutScreen{
+				background: #aecaf7;
+			}
+			.sura {
+				font-size: 37px;
+				text-align: center;
+				margin: 5px 0px;
+				padding: 10px;
+				background: #ddd;
+				text-shadow: none !important;
+				border: 1px solid #203c68;
+			}
+			.ucharon {
+				font-size: 18px;
+				text-align: center;
+				background: #203c68;
+				padding: 14px;
+				color: #ffffff;
+				text-shadow: none !important;
+				margin-bottom: 5px;
+			}
+			.ucharon span {
+				font-size: 16px;
+				border-bottom: 1px solid #fff;
+				text-align: center;
+				display: block;
+				width: 50%;
+				margin-left: 25%;
+				margin-bottom: 10px;
+			}
+			.bangla {
+				font-size: 18px;
+				text-align: center;
+				background: #345ea0;
+				padding: 14px;
+				color: #ffffff;
+				text-shadow: none !important;
+			}
+			.bangla span {
+				font-size: 16px;
+				border-bottom: 1px solid #fff;
+				text-align: center;
+				display: block;
+				width: 50%;
+				margin-left: 25%;
+				margin-bottom: 10px;
+			}
+			.center {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+			}
+			.h2 {
+                margin: 10px 0px 0px 0px;
+            }
+            .h3 {
+                margin: 0px 0px 3px 0px;
+            }
+            .h5 {
+                margin: 0px 0px 10px 0px;
+            }
+			.img-size-sm {
+                width: 50%;
+                height: auto;
+                border-radius: 4px;
+				margin-left: 25%;
+            }
+			.other {
+                color: #4f8ff7;
+                border: 1px solid #4f8ff7;
+                padding: 5px;
+				border-radius: 5px;
+                text-decoration: none;
+				margin-left: 25%;
+				width: 50%;
+				/* box-sizing: border-box; */
+            }
+
+		</style>
+		<link rel="stylesheet" href="css/leaflet.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.mobile.min.js"></script>
+		<script src="js/leaflet.js"></script>
+		<script src="js/app.js"></script>
+		<script src="phonegap.js"></script>
+
+	</head>
+
+	<body>
+		<!-- Main Home Page -->
+		<div id="homeScreen" data-role="page">
+			<img src="imgs/allah.jpg" class="banner" />
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+					<li><a href="#suraitems">বাংলা ৫ কালিমা</a></li>
+				</ul>
+				<div class="ui-grid-a center">
+					<div class="ui-block">
+						<a href="#aboutScreen" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon">Info</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- সূরা List Page -->
+		<div id="suraitems" data-role="page">
+			<header data-role="header" data-position="fixed" data-id="appHeader">
+				<h1>বাংলা ৫ কালিমা</h1>
+				<!-- <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a> -->
+			</header>
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+					<li><a href="#Surah-1">১. কালিমা তাইয়্যেবা</a></li>
+				</ul>
+				<ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+					<li><a href="#Surah-2">২. কালিমা শাহাদৎ</a></li>
+				</ul>
+				<ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+					<li><a href="#Surah-3">৩. কালিমা তামজীদ</a></li>
+				</ul>
+				<ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+					<li><a href="#Surah-4">৪. কালিমা তাওহীদ</a></li>
+				</ul>
+				<ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+					<li><a href="#Surah-5">৫. কালিমায়ে রদ্দে কুফর</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- কালিমা তাইয়্যেবা Page -->
+		<div id="Surah-1" data-role="page">
+			<header data-role="header" data-position="fixed" data-id="appHeader">
+				<h1>কালিমা তাইয়্যেবা</h1>
+				<!-- <a href="#suraitems" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a> -->
+			</header>
+			<div data-role="content">
+				<p>
+					<div class="sura">لآ اِلَهَ اِلّا اللّهُ مُحَمَّدٌ رَسُوُل اللّهِ</div>
+					<div class="ucharon"><span>বাংলা উচ্চারণ</span> লা-ইলাহা ইল্লাল্লাহু মুহাম্মাদুর রাসূলুল্লাহ।</div>
+					<div class="bangla"><span>বাংলা অর্থ</span> আল্লাহ এক আর কোন মাবুদ নেই। হযরত মুহাম্মদ (সাঃ) আল্লাহর প্রেরিত রাসূল।</div>
+				</p>
+			</div>
+		</div>
+
+		<!-- কালিমা শাহাদৎ Page -->
+		<div id="Surah-2" data-role="page">
+			<header data-role="header" data-position="fixed" data-id="appHeader">
+				<h1>কালিমা শাহাদৎ</h1>
+				<!-- <a href="#suraitems" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a> -->
+			</header>
+			<div data-role="content">
+				<p>
+					<div class="sura"> اشْهَدُ انْ لّآ اِلهَ اِلَّا اللّهُ وَحْدَه لَا شَرِيْكَ لَه، وَ اَشْهَدُ اَنَّ مُحَمَّدً اعَبْدُهوَرَسُولُه </div>
+					<div class="ucharon"><span>বাংলা উচ্চারণ</span> আশহাদু আল্লা ইলাহা ইল্লাল্লাহু ওয়াহ্দাহু লা শারীকালাহু, ওয়া আশহাদু আন্না মুহাম্মাদান আবদুহু ওয়া রাসূলুহু।</div>
+					<div class="bangla"><span>বাংলা অর্থ</span> আমি সাক্ষ্য প্রদান করছি যে, আল্লাহ্ ব্যতীত অন্য কোন মাবুদ নেই। তিনি এক। তাঁহার কোন অংশীদার নেই, এবং আমি আরও সাক্ষ্য প্রদান করছি যে, নিশ্চয়ই হযরত মুহাম্মদ (সঃ) আল্লাহ্র প্রেরিত বান্দা ও রাসূল।</div>
+				</p>
+			</div>
+		</div>
+
+		<!-- কালিমা তামজীদ Page -->
+		<div id="Surah-3" data-role="page">
+			<header data-role="header" data-position="fixed" data-id="appHeader">
+				<h1>কালিমা তামজীদ</h1>
+				<!-- <a href="#suraitems" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a> -->
+			</header>
+			<div data-role="content">
+				<p>
+					<div class="sura">سُبْحَان لِلّه وَ الْحَمْدُ لِلّهِ وَ لآ اِلهَ اِلّا اللّهُ، وَ اللّهُ اَكْبَرُ وَلا حَوْلَ وَلاَ قُوَّة ِلَّا بِاللّهِ الْعَلِىّ الْعَظِيْم</div>
+					<div class="ucharon"><span>বাংলা উচ্চারণ</span> সুব্হানাল্লাহি ওয়াল হামদুলিল্লাহি ওয়া লা-ইলাহা ইল্লাল্লাহু ওয়াল্লাহু আক্বার ওয়ালা হাওলা ক্বুয়াতা ইল্লা বিল্লাহিল্ আলিইল্ আযীম্। </div>
+					<div class="bangla"><span>বাংলা অর্থ</span> মহিমা ও সকল প্রসংশা আল্লাহ্র জন্য, আল্লাহ ব্যতীত আর কোন উপাস্য নেই। আল্লাহ মহান, সর্বশক্তিমান ও সর্বক্ষমতাবান। আল্লাহ ব্যতীত আর কেউ নয়। তিনিই মহান।</div>
+				</p>
+			</div>
+		</div>
+
+		<!--  Page -->
+		<div id="Surah-4" data-role="page">
+			<header data-role="header" data-position="fixed" data-id="appHeader">
+				<h1>কালিমা তাওহীদ</h1>
+				<!-- <a href="#suraitems" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a> -->
+			</header>
+			<div data-role="content">
+				<p>
+					<div class="sura">لا الهَ اِلَّا اللّهُ وَحْدَهُ لا شَرِيْكَ لَهْ، لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْى وَ يُمِيْتُ وَ هُوَحَىُّ لَّا يَمُوْتُ اَبَدًا اَبَدًا ط ذُو الْجَلَالِ وَ الْاِكْرَامِ ط بِيَدِهِ الْخَيْرُ ط وَهُوَ عَلى كُلِّ شَئ ٍ قَدِيْرٌ ط </div>
+					<div class="ucharon"><span>বাংলা উচ্চারণ</span> লা-ইলাহা ইল্লাল্লাহু ওয়াহ্ দাহু লা-সারিকা লা-হু লাহুল মুলকু ওয়া লাহুল হামদু ইউহা ই ওয়া উ মিতু বি ইয়া সি হিল খাইরু ওয়া-হু-ওয়া আ-লা কুল্লি শাইয়িন ক্বাদীর।</div>
+					<div class="bangla"><span>বাংলা অর্থ</span> আল্লাহ এক আর কোন মাবুদ নেই তিনি এক তার কোন অংশীদার নেই। সমস্ত সৃষ্টি জগৎ এবং সকল প্রশংসা তাঁরই। তিনি জীবন হান করেন আবার তিনিই মৃত্যুর কারণ তার হাতেই সব ভাল কিছু এবং তিনিই সৃষ্টির সবকিছুর উপর ক্ষমতাবান।</div>
+				</p>
+			</div>
+		</div>
+
+		<!--  Page -->
+		<div id="Surah-5" data-role="page">
+			<header data-role="header" data-position="fixed" data-id="appHeader">
+				<h1>কালিমায়ে রদ্দে কুফর</h1>
+				<!-- <a href="#suraitems" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a> -->
+			</header>
+			<div data-role="content">
+				<p>
+					<div class="sura"> اللهم انی اعوذبک من ان یشرک بک شیئا واستغفرک ما اعلم به ومالا اعلم به تبت عنه وتبرأت من الکفر والشرک والمعاصی کلها واسلمت وامنت واقول ان لا اله الا الله محمد رسول الله صلی الله علیه وسلم. </div>
+					<div class="ucharon"><span>বাংলা উচ্চারণ</span> আল্লাহুম্মাহ ইন্নী আউযুবিকা মিন্ আন্ উশ্রিকা বিকা শাইআওঁ ওয়া আনা আ’লামু বিহী, ওয়া আস্তাগ্ফিরুকা লিমা আ’লামু বিহী, ওয়ামা লা-আ’লামু বিহী, তুব্তু আন্হু ওয়া তাবাররা’তু মিনাল কুফরি ওয়াশ্ শিরকি ওয়াল মায়াছী কুল্লিহা, ওয়া আসলামতু ওয়া আমান্তু ওয়া আক্বুলু আল্লা ইলাহা ইল্লাল্লাহু মুহাম্মাদুর রাসুলুল্লাহি।</div>
+					<div class="bangla"><span>বাংলা অর্থ</span> হে আল্লাহ্! আমি তমার নিকট আকাঙ্ক্ষা করছি যে আমি যেন কাউকে তমার সাথে শরিক না করি। আমি আমার জ্ঞাত ও অজ্ঞাত পাপ হতে ক্ষমা প্রার্থনা করছি এবং তা হতে তোবা করছি। কুফরী, শিরক ও অন্যান্য সব পাপ হতে দূরে থাকছি। এবং স্বীকার করছি যে, “আল্লাহ এক আর কোন মাবুদ নেই। হযরত মুহাম্মদ (সঃ) আল্লাহর প্রেরিত রাসূল।”</div>
+				</p>
+			</div>
+		</div>
+
+
+		<!-- About Page -->
+		<div id="aboutScreen" data-role="page">
+			<header data-role="header" data-position="fixed" data-id="appHeader">
+				<h1>About</h1>
+				<!-- <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a> -->
+			</header>
+			<div data-role="content">
+				<h2 class="h2 center">FahadIn</h2>
+				<!-- <img class="center img-size-sm" src="imgs/fahadin.jpg" /> -->
+				<h3 class="h3 center">আরবি, বাংলা উচ্চারণ ও অনুবাদসহ পাঁচ কালিমা পরিচিতি</h3>
+				<h5 class="h5 center">কালেমা ইসলামের মৌলিক বিশ্বাস সম্বলিত কয়েকটি আরবি পংক্তির নাম। এর মাধ্যমেই ইসলামের প্রথম স্তম্ভ পূর্ণতা পায়। ইসলামে কালমিার গুরুত্ব ও মর্যাদা অনেক । কালিমার মূল অবকাঠামো হচ্ছে বিশ্বাস।</h5>
+				<p class="center">Fahadin</p>
+				<br>
+				<br>
+				<a href="#" class="other">Our Other Apps</a></p>
+				<p class="center">kawsarkamal71@gmail.com</p>
+			</div>
+		</div>
+
+		<script src="js/index.js"></script>
+	</body>
+</html>
